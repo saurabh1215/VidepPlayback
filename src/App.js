@@ -8,15 +8,15 @@ const App = () => {
   const [videoIndex, setVideoIndex] = useState(0);
 
   const videoLinks = [
+    'https://www.youtube.com/watch?v=bnExiZiU0vA&ab_channel=TLEEliminators-byPriyansh',
     'https://www.youtube.com/watch?v=ThOkOfn3E-g&ab_channel=StarSports',
-    'https://www.youtube.com/watch?v=yxTuj__LXJU',
-    'https://www.youtube.com/watch?v=OcpIVIDZVKQ',
-    'https://www.youtube.com/watch?v=Z2Qk-iQutpI',
-    'https://www.youtube.com/watch?v=9cdcfTtpHS8',
-    'https://www.youtube.com/watch?v=ZTMHbC0MkfQ',
-    'https://www.youtube.com/watch?v=aRyuMNwn02w',
-
-    // Add more video links as needed
+    'https://www.youtube.com/watch?v=LOd-uvWCIuA&ab_channel=FanCode',
+    'https://www.youtube.com/watch?v=hAPVhMIXTg8&ab_channel=cricket.com.au',
+    'https://www.youtube.com/watch?v=mllJ49QIIVs&ab_channel=cricket.com.au',
+    'https://www.youtube.com/watch?v=W2RT3YIPSYU&ab_channel=cricket.com.au',
+    'https://www.youtube.com/watch?v=Y1J9_9-vNcU&ab_channel=England%26WalesCricketBoard',
+    
+   
   ];
 
   const opts = {
@@ -36,8 +36,13 @@ const App = () => {
   };
 
   return (
+    
     <div className="youtube-page-container">
-      <h1>YouTube Page</h1>
+      
+      
+
+      <h1><i class="fa-brands fa-youtube"></i> YouTube Page</h1>
+      
      
       <div className="video-player-container">
         <YouTube videoId={getVideoId(videoLinks[videoIndex])} opts={opts} onEnd={onVideoEnd} />
@@ -57,6 +62,9 @@ const App = () => {
           ))}
         </ul>
       </div>
+      <div id="footer">
+            <p>© 2023 Video Playback. All rights reserved.</p>
+        </div>
     </div>
   );
 };
